@@ -17,6 +17,13 @@
   --secondary-main-color: #757575;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--main-font);
   font-style: normal;
@@ -34,8 +41,14 @@ body {
   font-style: normal;
 }
 
-.address-list {
-  list-style: none;
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -54,6 +67,40 @@ body {
 }
 
 /* ==========  HEADER  ==========*/
+
+.header {
+  padding: 32px 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header .address {
+  margin-left: auto;
+}
+
+.header-mail-link {
+  margin-right: 50px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.header .logo {
+  margin-right: 94px;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
 
 .navigation-list-link {
   font-weight: 500;
@@ -93,6 +140,11 @@ body {
   color: var(--accent-color);
 }
 
+.address-list {
+  list-style: none;
+  display: flex;
+}
+
 /* ==========  END HEADER  ==========*/
 
 /* ==========   HERO   ==========*/
@@ -108,6 +160,9 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-color);
+  text-align: center;
+  padding-top: 220px;
+  padding-bottom: 30px;
 }
 
 .hero-button {
@@ -119,14 +174,34 @@ body {
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--light-color);
+  padding: 10px 28px;
+
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin-bottom: 178px;
+  margin-left: 485px;
+  margin-right: 485px;
 }
 
 /* ==========   END  HERO   ==========*/
 
 /* ==========   ABOUT   ==========*/
 
+.about {
+  padding-bottom: 94px;
+}
+
+.about .title {
+  margin-top: 94px;
+}
 .about-list {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 108px;
 }
 
 .about-list-subtitle {
@@ -136,6 +211,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color);
+  margin-bottom: 10px;
 }
 
 .team-list-subtitle {
@@ -144,6 +220,9 @@ body {
   line-height: 1.188;
   letter-spacing: 0.03em;
   color: var(--main-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .about-text {
@@ -152,6 +231,8 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--secondary-main-color);
+
+  max-width: 270px;
 }
 
 .team-text {
@@ -160,9 +241,12 @@ body {
   line-height: 1.188;
   letter-spacing: 0.03em;
   color: var(--secondary-main-color);
+  text-align: center;
 }
 
 /* ==========  END  ABOUT   ==========*/
+
+/* ==========   OUR TEAM   ==========*/
 
 .title {
   font-weight: 700;
@@ -170,15 +254,45 @@ body {
   line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--main-color);
+
+  text-align: center;
+  margin-bottom: 50px;
 }
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-team {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.title-img {
+  display: flex;
+  justify-content: space-between;
+}
+/* ========== END OUR TEAM ==========*/
 
 /* ==========   FOOTER   ==========*/
 
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.location {
+.list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.list-item:first-child {
+  margin-top: 20px;
+}
+
+.address .location {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -203,6 +317,38 @@ body {
 /* ==========  END  FOOTER   ==========*/
 
 /* ========== BUTTON PORTFOLIO  ==========*/
+
+.portfolio-button-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+  margin-bottom: 50px;
+}
+
+.portfolio-button-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-element {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 94px;
+}
+
+.portfolio-element-item {
+  margin-right: 26px;
+  margin-bottom: 26px;
+
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-element-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-element-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 
 .portfolio-button-item {
   font-weight: 500;
@@ -229,6 +375,9 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-color);
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 24px;
 }
 
 .work-text {
@@ -238,6 +387,9 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--secondary-main-color);
+
+  margin-bottom: 20px;
+  margin-left: 24px;
 }
 
 /* ========== END WORK PORTFOLIO  ==========*/
