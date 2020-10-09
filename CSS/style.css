@@ -66,21 +66,11 @@ img {
   color: var(--main-color);
 }
 
-.hr-line {
-  position: absolute;
-  width: 1600px;
-  height: 0px;
-  left: 0px;
-  top: 80px;
-
-  border: 1px solid #ececec;
-}
-
 /* ==========  HEADER  ==========*/
 
 .header {
   padding-top: 24px;
-  padding-bottom: 10px;
+  padding-bottom: 25px;
 }
 
 .header .container {
@@ -107,6 +97,16 @@ img {
 
 .header .logo {
   margin-right: 94px;
+}
+
+.line {
+  position: absolute;
+  width: 1600px;
+  height: 0px;
+  left: 0px;
+  top: 80px;
+
+  border: 1px solid #ececec;
 }
 
 .navigation-list-item:not(:last-child) {
@@ -162,8 +162,8 @@ img {
 
 .hero {
   background-color: #2f303a;
-  padding-bottom: 178px;
-  padding-top: 220px;
+  padding-bottom: 179px;
+  padding-top: 221px;
 }
 
 .hero-title {
